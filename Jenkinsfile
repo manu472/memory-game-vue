@@ -3,7 +3,7 @@ pipeline {
 
     stages {
 
-        stage('Install') {
+        stage('Install Dependencies') {
             steps {
                 sh 'npm install'
             }
@@ -15,7 +15,7 @@ pipeline {
             }
         }
 
-        stage('Test') {
+        stage('Tests') {
             steps {
                 sh 'npm run test'
             }
@@ -24,12 +24,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm run build'
-            }
-        }
-
-        stage('Deploy Firebase') {
-            steps {
-                sh 'firebase deploy --token $FIREBASE_TOKEN'
             }
         }
     }
