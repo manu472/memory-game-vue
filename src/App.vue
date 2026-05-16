@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <h1>Juego de memoria 🧠</h1>
+    <h1>Juego de memoria Vue 🧠</h1>
 
     <div class="board">
       <div
